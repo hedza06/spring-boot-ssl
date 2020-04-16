@@ -1,0 +1,15 @@
+version: '3.2'
+
+services:
+  springboot:
+    build:
+      context: ./
+      dockerfile: app.dockerfile
+    image: hedza06/spring-docker-ssl
+    ports:
+      - 8443:8443
+    container_name: spring-boot-ssl
+    networks:
+      - spdoc-net
+networks:
+  spdoc-net:

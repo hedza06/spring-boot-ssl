@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Spring Boot On SSL Inside Docker Container
+# Server Configuration
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:keystore/hedza06.p12 # path inside docker container
+    key-store-type: PKCS12 # keystore type
+    key-alias: hedza06 # keystore alias
+    key-store-password: hedza123  # keystore password
+
+debug: false
